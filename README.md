@@ -4,6 +4,7 @@
 </div>
 
 A Fabric 26.2 port of [Create: Electro Energetics](https://github.com/george8188625/Create-Electro-Energetics), built for [Create Fly](https://github.com/ZurrTum/Create-Fly).
+Compitable & tested witch [Create Fly: Steam 'n' Rails](https://github.com/cat4blep/Create-Steam-n-Rails-Fly)
 
 Electro Energetics simulates voltage, current, resistance and power losses. It adds electrical generation and distribution, motors, transformers, panels, meters, protection devices, lighting and electric railway equipment to Create.
 

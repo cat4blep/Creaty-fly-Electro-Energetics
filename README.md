@@ -4,6 +4,7 @@
 </div>
 
 A Fabric 26.2 port of [Create: Electro Energetics](https://github.com/george8188625/Create-Electro-Energetics), built for [Create Fly](https://github.com/ZurrTum/Create-Fly).
+
 Compitable & tested witch [Create Fly: Steam 'n' Rails](https://github.com/cat4blep/Create-Steam-n-Rails-Fly)
 
 Electro Energetics simulates voltage, current, resistance and power losses. It adds electrical generation and distribution, motors, transformers, panels, meters, protection devices, lighting and electric railway equipment to Create.
@@ -43,6 +44,8 @@ Client tests need an OpenGL-capable display. On Linux, use `xvfb-run -a ./gradle
 ## Compatibility
 
 The Fabric port includes the core electrical simulation, machines, wires, panels, Fabric Energy converter, Create contraptions, railway power, schematics, Ponder, client tools and optional CC:Tweaked/JEI integration.
+
+Testet witch [Create Fly: Steam 'n' Rails](https://github.com/cat4blep/Create-Steam-n-Rails-Fly)
 
 Sable/Sable Companion, Aeronautics, Offroad, Simulated and Strut Your Stuff integrations require compatible upstream Fabric 26.2 releases. The unsupported assembly mixins and Strut block source/resources are retained under `src/unsupported` for further work.
 

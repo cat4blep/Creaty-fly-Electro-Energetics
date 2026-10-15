@@ -1,21 +1,11 @@
 <div align="center">
   <img src="src/main/resources/logo.png" width="128" height="128" alt="Create: Electro Energetics">
-  <h1>Create: Electro Energetics — Fabric</h1>
+  <h1>Create Fly: Electro Energetics</h1>
 </div>
 
 A Fabric 26.2 port of [Create: Electro Energetics](https://github.com/george8188625/Create-Electro-Energetics), built for [Create Fly](https://github.com/ZurrTum/Create-Fly).
 
 Electro Energetics simulates voltage, current, resistance and power losses. It adds electrical generation and distribution, motors, transformers, panels, meters, protection devices, lighting and electric railway equipment to Create.
-
-## Requirements
-
-| Dependency | Version |
-| --- | --- |
-| Minecraft | 26.2 |
-| Java | 25 |
-| Fabric Loader | 0.19.5 or newer |
-| Fabric API | 0.161.0+26.2 |
-| Create Fly | 26.2-6.0.9-2 |
 
 Fabric Energy API 5.0.0 is bundled. CC:Tweaked 1.120.2 and JEI 30.42.0.236 for Fabric 26.2 are optional.
 

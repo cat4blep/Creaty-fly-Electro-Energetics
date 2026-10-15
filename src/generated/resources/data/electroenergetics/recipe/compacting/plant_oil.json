@@ -1,0 +1,12 @@
+{
+  "type": "electroenergetics:fluid_compacting",
+  "fluid_results": [
+    {
+      "amount": 8100,
+      "id": "electroenergetics:plant_oil"
+    }
+  ],
+  "ingredients": [
+    "#c:seeds"
+  ]
+}

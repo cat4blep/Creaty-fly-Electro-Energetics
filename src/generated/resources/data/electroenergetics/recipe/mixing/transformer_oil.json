@@ -1,0 +1,22 @@
+{
+  "type": "create:mixing",
+  "fluid_ingredients": [
+    {
+      "type": "fluid_tag",
+      "amount": 20250,
+      "fluid_tag": "#c:plantoil"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 20250,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "fluid_results": [
+    {
+      "amount": 10125,
+      "id": "electroenergetics:transformer_oil"
+    }
+  ],
+  "heat_requirement": "heated"
+}

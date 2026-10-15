@@ -1,0 +1,25 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:nuggets/electrum"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "n": "#c:nuggets/electrum"
+  },
+  "pattern": [
+    "n",
+    "n",
+    "n"
+  ],
+  "result": {
+    "count": 1,
+    "id": "electroenergetics:electrum_wire"
+  }
+}

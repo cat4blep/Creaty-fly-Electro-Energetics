@@ -1,0 +1,59 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": "electroenergetics:transformer_core_lamination",
+  "result": {
+    "id": "electroenergetics:transformer_core"
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredient": "electroenergetics:transformer_core_lamination",
+      "results": [
+        "$result"
+      ],
+      "target": "$ingredient"
+    },
+    {
+      "type": "create:deploying",
+      "ingredient": "electroenergetics:transformer_core_lamination",
+      "results": [
+        "$result"
+      ],
+      "target": "$ingredient"
+    },
+    {
+      "type": "create:deploying",
+      "ingredient": "electroenergetics:transformer_core_lamination",
+      "results": [
+        "$result"
+      ],
+      "target": "$ingredient"
+    },
+    {
+      "type": "create:pressing",
+      "ingredient": "$ingredient",
+      "results": [
+        "$result"
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredient": "electroenergetics:copper_wire_spool",
+      "results": [
+        "$result"
+      ],
+      "target": "$ingredient"
+    },
+    {
+      "type": "create:deploying",
+      "ingredient": "electroenergetics:copper_wire_spool",
+      "results": [
+        "$result"
+      ],
+      "target": "$ingredient"
+    }
+  ],
+  "transitional_item": {
+    "id": "electroenergetics:incomplete_transformer_core"
+  }
+}

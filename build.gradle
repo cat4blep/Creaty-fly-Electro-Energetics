@@ -1,0 +1,72 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+    id 'java-library'
+}
+
+version = mod_version
+group = mod_group_id
+base { archivesName = "${mod_id}-fabric-${minecraft_version}" }
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.squiddev.cc' }
+    maven { url = 'https://maven.blamejared.com' }
+    exclusiveContent {
+        forRepository { maven { url = 'https://api.modrinth.com/maven' } }
+        filter { includeGroup 'maven.modrinth' }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    implementation "maven.modrinth:create-fly:${create_version}"
+    include implementation('teamreborn:energy:5.0.0')
+    compileOnly 'cc.tweaked:cc-tweaked-26.2-fabric:1.120.2'
+    compileOnly 'mezz.jei:jei-26.2-fabric:30.42.0.236'
+    if (providers.gradleProperty('withOptionalCompat').isPresent()) {
+        runtimeOnly 'cc.tweaked:cc-tweaked-26.2-fabric:1.120.2'
+        runtimeOnly 'mezz.jei:jei-26.2-fabric:30.42.0.236'
+    }
+    testImplementation platform('org.junit:junit-bom:5.14.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation "net.fabricmc:fabric-loader-junit:${loader_version}"
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+sourceSets.main.resources.srcDir 'src/generated/resources'
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand version: project.version }
+    exclude '.cache/**'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 25
+    options.compilerArgs += ['-Xmaxerrs', '10000']
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
+    withSourcesJar()
+}
+
+test { useJUnitPlatform() }
+jar { from('LICENSE') { rename { "${it}_${mod_id}" } } }
+
+fabricApi {
+    configureDataGeneration {
+        outputDirectory = file('src/generated/resources')
+        addToResources = false
+        client = true
+    }
+    configureTests {
+        createSourceSet = true
+        modId = 'electroenergetics-gametest'
+        enableGameTests = true
+        enableClientGameTests = true
+    }
+}

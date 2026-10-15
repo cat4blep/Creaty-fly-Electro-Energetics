@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "registry": "minecraft:item",
+      "values": [
+        "c:nuggets/electrum"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": "electroenergetics:empty_spool",
+    "w": "#c:wires/electrum"
+  },
+  "pattern": [
+    " w ",
+    "wsw",
+    " w "
+  ],
+  "result": {
+    "count": 1,
+    "id": "electroenergetics:electrum_wire_spool"
+  }
+}
